@@ -1,0 +1,267 @@
+{
+  "appgroup_id": "699d82c52373a65c91bcfbf7",
+  "appgroup_name": "Gewohnheitstracker",
+  "apps": {
+    "taeglicher_check_in": {
+      "app_id": "699d82aeceb3f171fccf9d4c",
+      "name": "T\u00e4glicher Check-in",
+      "controls": {
+        "checkin_datum": {
+          "identifier": "checkin_datum",
+          "label": "Datum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` or `null`/`None`.\n\nFor example: `1642-12-25`.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true
+        },
+        "erledigte_gewohnheiten": {
+          "identifier": "erledigte_gewohnheiten",
+          "label": "Erledigte Gewohnheiten",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to a LivingApp record from the target lookup app 'Gewohnheiten' with the id `699d82a9f2a4cf5dbf7a58d8` (or `null`/`None`).\n\nThe field value will be a valid record URL in the form `https://my.living-apps.de/rest/apps/699d82a9f2a4cf5dbf7a58d8/<record-id>` or `null`/`None`.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true,
+          "lookup_app": "https://my.living-apps.de/rest/apps/699d82a9f2a4cf5dbf7a58d8"
+        },
+        "tagesnotizen": {
+          "identifier": "tagesnotizen",
+          "label": "Tagesnotizen",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true
+        }
+      }
+    },
+    "tracking_eintraege": {
+      "app_id": "699d82adf12ba85b5d3e8b45",
+      "name": "Tracking-Eintr\u00e4ge",
+      "controls": {
+        "gewohnheit": {
+          "identifier": "gewohnheit",
+          "label": "Gewohnheit",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to a LivingApp record from the target lookup app 'Gewohnheiten' with the id `699d82a9f2a4cf5dbf7a58d8` (or `null`/`None`).\n\nThe field value will be a valid record URL in the form `https://my.living-apps.de/rest/apps/699d82a9f2a4cf5dbf7a58d8/<record-id>` or `null`/`None`.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true,
+          "lookup_app": "https://my.living-apps.de/rest/apps/699d82a9f2a4cf5dbf7a58d8"
+        },
+        "datum_uhrzeit": {
+          "identifier": "datum_uhrzeit",
+          "label": "Datum und Uhrzeit",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` or `null`/`None`.\n\nFor example: `1879-03-14T11:30`.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true
+        },
+        "status": {
+          "identifier": "status",
+          "label": "Status",
+          "type": "lookup",
+          "subtype": "radio",
+          "fulltype": "lookup/radio",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute or `null`/`None`.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true,
+          "lookup_data": {
+            "erledigt": "Erledigt",
+            "uebersprungen": "\u00dcbersprungen",
+            "teilweise": "Teilweise erledigt"
+          }
+        },
+        "bewertung": {
+          "identifier": "bewertung",
+          "label": "Bewertung (1-5)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true,
+          "precision": null
+        },
+        "notizen": {
+          "identifier": "notizen",
+          "label": "Notizen",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true
+        }
+      }
+    },
+    "gewohnheiten": {
+      "app_id": "699d82a9f2a4cf5dbf7a58d8",
+      "name": "Gewohnheiten",
+      "controls": {
+        "gewohnheit_name": {
+          "identifier": "gewohnheit_name",
+          "label": "Name der Gewohnheit",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true
+        },
+        "beschreibung": {
+          "identifier": "beschreibung",
+          "label": "Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true
+        },
+        "kategorie": {
+          "identifier": "kategorie",
+          "label": "Kategorie",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute or `null`/`None`.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true,
+          "lookup_data": {
+            "gesundheit": "Gesundheit",
+            "fitness": "Fitness",
+            "ernaehrung": "Ern\u00e4hrung",
+            "produktivitaet": "Produktivit\u00e4t",
+            "persoenliche_entwicklung": "Pers\u00f6nliche Entwicklung",
+            "soziales": "Soziales",
+            "finanzen": "Finanzen",
+            "kreativitaet": "Kreativit\u00e4t",
+            "sonstiges": "Sonstiges"
+          }
+        },
+        "ziel_haeufigkeit": {
+          "identifier": "ziel_haeufigkeit",
+          "label": "Ziel-H\u00e4ufigkeit",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute or `null`/`None`.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true,
+          "lookup_data": {
+            "taeglich": "T\u00e4glich",
+            "mehrmals_woche": "Mehrmals pro Woche",
+            "woechentlich": "W\u00f6chentlich",
+            "mehrmals_monat": "Mehrmals pro Monat",
+            "monatlich": "Monatlich"
+          }
+        },
+        "startdatum": {
+          "identifier": "startdatum",
+          "label": "Startdatum",
+          "type": "date",
+          "subtype": "date",
+          "fulltype": "date/date",
+          "description": "A calendar date consisting of year, month and day. (Or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>` or `null`/`None`.\n\nFor example: `1642-12-25`.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true
+        },
+        "aktiv": {
+          "identifier": "aktiv",
+          "label": "Gewohnheit ist aktiv",
+          "type": "bool",
+          "subtype": null,
+          "fulltype": "bool",
+          "description": "A boolean value, i.e. `true` or `false` (or `null`/`None`).",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": false,
+          "in_expert_search": true
+        }
+      }
+    }
+  },
+  "metadata": {
+    "apps_list": [
+      "T\u00e4glicher Check-in",
+      "Tracking-Eintr\u00e4ge",
+      "Gewohnheiten"
+    ]
+  }
+}
